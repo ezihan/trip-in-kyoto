@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京都旅行プラン</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .tab {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .tab button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #ddd;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .tab button.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .content {
+            display: none;
+            padding: 15px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .content.active {
+            display: block;
+        }
+        a link :visited, a link :hover{
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>京都旅行 2日間プラン</h1>
+    <div class="tab">
+        <button class="tablink active" onclick="openTab(event, 'day1')">1日目（午後から）</button>
+        <button class="tablink" onclick="openTab(event, 'day2')">2日目</button>
+    </div>
+    
+    <div id="day1" class="content active">
+        <h2>1日目：東山・伏見エリア</h2>
+        <ul>
+            <li><strong>12:00 昼食</strong> - 京都駅周辺（はしたて、拉麺小路 など）</li>
+            <li><strong>13:00 <a href="https://inari.jp/">伏見稲荷大社</a></strong> - JR奈良線で約5分</li>
+            <li><strong>14:30 <a href="https://tofukuji.jp/">東福寺</a></strong> - 徒歩約15分</li>
+            <li><strong>15:30 <a href="https://www.yasaka-jinja.or.jp/">祇園・八坂神社</a></strong> - 京阪電車で約10分</li>
+            <li><strong>17:30 <a href="https://www.ponto-chou.com/">先斗町</a> or <a href="https://www.kyoto-nishiki.or.jp/">錦市場</a>で夕食</strong> - 京料理を堪能</li>
+            <li><strong>20:00 ホテルへ戻る</strong> - バスまたは電車</li>
+        </ul>
+    </div>
+    
+    <div id="day2" class="content">
+        <h2>2日目：嵐山 & 金閣寺エリア</h2>
+        <ul>
+            <li><strong>8:00 <a href="https://www.google.com/search?client=safari&rls=en&q=嵐山&ie=UTF-8&oe=UTF-8">嵐山</a>へ移動</strong> - JR嵯峨野線で約15分</li>
+            <li><strong>8:30 <a 
+                href="https://www.google.com/search?client=safari&sca_esv=7c0335b6038f02f9&rls=en&q=渡月橋&udm=2&fbs=ABzOT_CQpVtiUOlA_gI5RF5xgNRQJ2Bdnh7mFA_A1hg0Mmf02KJ8sGsDes6MrtogRvQuKbekseugvj0JotLT2BhLxsrVm1rsMdayLVSWkJPcjgAP3Zw1TL83eDJqwOhz_2ZDS4yhbxV2y7pxztkMnpvUnVp3v4jF3dbVnMaspqsvCTpKADqokpS0FBT_apybaYpWN-tHfod8CeYPRwh24w6p0JN6xkuue09JfFIbYz8oUvT0kuj1ZVUjaNcutBHN1hTOxJWGB1EP&sa=X&ved=2ahUKEwianoPSzKmMAxUzavUHHeZbGZ4QtKgLegQIDhAB&biw=1128&bih=1298&dpr=2">
+                渡月橋</a>
+                 & 
+                 <a 
+                 href="https://www.google.com/search?q=竹林の小径&client=safari&sca_esv=7c0335b6038f02f9&rls=en&udm=2&biw=1470&bih=839&ei=fuvkZ-jwN8vT1e8P_caH2Ao&oq=竹林&gs_lp=EgNpbWciBuerueaelyoCCAEyBRAAGIAEMggQABiABBixAzIIEAAYgAQYsQMyBRAAGIAEMggQABiABBixAzIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAESORSUK0LWJVFcAR4AJABAJgBdqABuwmqAQQxNS4xuAEDyAEA-AEBmAIPoALqB6gCAMICDRAAGIAEGLEDGIMBGATCAgsQABiABBixAxiDAcICEBAAGIAEGLEDGIMBGAQYigXCAgoQABiABBixAxgEwgIHEAAYgAQYBJgDRZIHAjE1oAfnKrIHAjEyuAfeBw&sclient=img">
+                 竹林の小径</a></strong></li>
+            <li><strong>9:30 <a href="https://www.tenryuji.com/">天龍寺</a></strong></li>
+            <li><strong>12:00 昼食（嵐山）</strong> - 湯葉料理、京懐石</li>
+            <li><strong>13:30 金閣寺へ移動</strong> - バスで約40分</li>
+            <li><strong>14:15 <a href="https://www.shokoku-ji.jp/kinkakuji/">金閣寺</a></strong></li>
+            <li><strong>15:00 <a href="http://www.ryoanji.jp/smph/">龍安寺</a> or <a href="https://www.keihanhotels-resorts.co.jp/the-thousand-kyoto/sight/gosho-nishijin-kitano/ninnaji.html">仁和寺</a></strong> - バスで約10分</li>
+            <li><strong>16:30 京都駅へ戻る</strong> - バスで約30分</li>
+            <li><strong>18:00 夕食（京都駅周辺）</strong></li>
+        </ul>
+    </div>
+    
+    <script>
+        function openTab(event, tabName) {
+            var contents = document.getElementsByClassName("content");
+            var tabs = document.getElementsByClassName("tablink");
+            
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].classList.remove("active");
+            }
+            
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+            
+            document.getElementById(tabName).classList.add("active");
+            event.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
